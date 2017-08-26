@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Organizze chrome extension",
+  "description": "This extension will generate data from Organizze app",
+  "version": "1.0",
+
+  "browser_action": {
+  },
+  "background" : {
+    "scripts" : ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["https://app.organizze.com.br/*"],
+    "js": ["jquery-3.2.1.min.js","myScript.js"]
+  }],
+  "permissions": [
+   "activeTab"
+   ]
+}
